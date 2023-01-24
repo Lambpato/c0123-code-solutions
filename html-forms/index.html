@@ -4,47 +4,52 @@
     <title>Forms</title>
   </head>
   <body>
+
     <h1>Coding Form!</h1>
-    <p>Email
-      <br/>
-      <input type="text" name="email" />
-    </p>
 
-    <p>Why is coding cool?
-      <br/>
-      <select name="Select an Option">
-        <option value="select an option">Select an option</option>
-        <option value="Because it's interesting">Because it's interesting</option>
-        <option value="Because it's fun">Because it's fun</option>
-        <option value="Because it's powerful">Because it's powerful</option>
-        <option value="Because I can code a girlfriend">Because I can code a girlfriend</option>
-      </select>
-    </p>
+    <div>
+      <label for="email">Email</label>
+    </div>
 
-    <p>Favorite Language (choose one)
-      <br/>
-      <input type="radio" name="language" value="HTML" /> HTML
-      <input type="radio" name="language" value="CSS" /> CSS
-      <input type="radio" name="language" value="JavaScript" /> JavaScript
-    </p>
+    <input type="text" name="email" />
 
-    <p>Would you like to sign up for more information?</p>
+    <div>
+      Why is coding cool?
+    </div>
+
+    <select name="Select an Option">
+      <option value="select an option">Select an option</option>
+      <option value="Because it's interesting">Because it's interesting</option>
+      <option value="Because it's fun">Because it's fun</option>
+      <option value="Because it's powerful">Because it's powerful</option>
+      <option value="Because I can code a girlfriend">Because I can code a girlfriend</option>
+    </select>
 
     <p>
-      <input type="checkbox" name="Sign-Up" value="Sign me up!"/>
-      Sign me up!
-      <br/>
+      Favorite Language (choose one)
+    </p>
+
+    <input type="radio" name="language" value="HTML" /> HTML
+    <input type="radio" name="language" value="CSS" /> CSS
+    <input type="radio" name="language" value="JavaScript" /> JavaScript
+
+    <p>
+      Would you like to sign up for more information?
+    </p>
+
+    <input type="checkbox" name="Sign-Up" value="Sign me up!"/>
+    Sign me up!
+
+    <div>
       Comments
-      <br/>
-      <textarea rows="10" cols="35" id="comments">
-      </textarea>
-      <br/>
+    </div>
+
+    <textarea rows="10" cols="35" id="comments">  </textarea>
+
+    <div>
       <label>
         <input type="submit" value="Submit"/>
       </label>
-    </p>
-
-
 
   </body>
 </html>
