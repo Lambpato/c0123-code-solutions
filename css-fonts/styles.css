@@ -1,0 +1,11 @@
+h1, h2{
+  font-family: 'Libre Barcode 39', cursive;
+  padding-top: 20px;
+  color: lightblue;
+}
+
+p {
+  font-family: 'Yellowtail', cursive;;
+  color: darkblue;
+  line-height: 35px;
+  }
