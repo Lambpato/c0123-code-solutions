@@ -1,0 +1,14 @@
+th {
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
