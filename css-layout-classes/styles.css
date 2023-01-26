@@ -1,0 +1,11 @@
+#body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 0 25px;
+}
