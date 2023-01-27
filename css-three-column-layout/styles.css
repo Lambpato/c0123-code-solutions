@@ -1,5 +1,11 @@
-body {
+.container {
   background-color: rgb(71 148 212);
+  margin: 0 15%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .image {
@@ -17,17 +23,21 @@ div.text {
   margin: 0 20%;
 }
 
-.box {
-  display: flex;
-  justify-content: space-around;
-}
-
 h2.text {
   text-align: center;
   color: white;
+  font-size: xx-large;
 }
 
 .text {
   font-family: Lato, sans-serif;
-  font-weight: 100;
+  font-weight: 400;
+}
+
+.col {
+  flex-basis: calc(100% / 3);
+}
+
+h3 {
+  font-size: x-large;
 }
