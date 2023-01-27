@@ -1,11 +1,23 @@
-#body {
+.row {
   display: flex;
-  flex-direction: column;
   margin: 0 10%;
 }
 
 .container {
-  display: flex;
   justify-content: center;
   margin: 0 25px;
+  max-width: 100%;
+}
+
+#row-two {
+  display: flex;
+  margin: 0 auto;
+}
+
+#row-three {
+  display: flex;
+}
+
+#row-four {
+  display: flex;
 }
