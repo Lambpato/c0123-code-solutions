@@ -1,6 +1,5 @@
 .container {
-  justify-content: center;
-  margin: 0 25px;
+  margin: 0 auto;
   max-width: 800px;
 }
 
@@ -8,10 +7,22 @@
   display: flex;
 }
 
-.col-two-third {
-  display: flex;
-}
-
 .col-4 {
   flex-basis: calc(100% / 4);
+}
+
+.col-full {
+  flex-basis: 100%;
+}
+
+.col-third {
+  flex-basis: calc(100% / 3);
+}
+
+.col-4 > img {
+  width: 100%;
+}
+
+.column-two-thirds {
+  flex-basis: calc(200% / 3);
 }
