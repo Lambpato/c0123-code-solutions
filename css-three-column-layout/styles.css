@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(71 148 212);
+}
+
+.image {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  padding: 18px;
+  margin: 0 auto;
+}
+
+section.text {
+  color: white;
+  text-align: center;
+  margin: 0 20%;
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col {
+  justify-content: center;
+}
+
+h2.text {
+  text-align: center;
+  color: white;
+}
+
+.text {
+  font-family: Lato, sans-serif;
+  font-weight: 100;
+}
