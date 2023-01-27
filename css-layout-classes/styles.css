@@ -1,23 +1,17 @@
-.row {
-  display: flex;
-  margin: 0 10%;
-}
-
 .container {
   justify-content: center;
   margin: 0 25px;
-  max-width: 100%;
+  max-width: 800px;
 }
 
-#row-two {
-  display: flex;
-  margin: 0 auto;
-}
-
-#row-three {
+.row {
   display: flex;
 }
 
-#row-four {
+.col-two-third {
   display: flex;
+}
+
+.col-4 {
+  flex-basis: calc(100% / 4);
 }
