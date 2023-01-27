@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
 }
 
-section.text {
+div.text {
   color: white;
   text-align: center;
   margin: 0 20%;
@@ -20,10 +20,6 @@ section.text {
 .box {
   display: flex;
   justify-content: space-around;
-}
-
-.col {
-  justify-content: center;
 }
 
 h2.text {
