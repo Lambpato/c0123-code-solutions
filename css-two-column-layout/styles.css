@@ -76,7 +76,6 @@ button {
 button:hover {
   margin-top: 50px;
   padding: 10px 35px;
-  border-color: white;
   color: white;
   background-color: rgb(209 76 69);
   font-family: Karla, sans-serif;
