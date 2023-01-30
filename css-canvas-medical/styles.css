@@ -1,0 +1,172 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text-4-head {
+  color: rgb(40 69 100);
+  font-family: "Tiempos Headline", sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+button {
+  font-family: avenir, sans-serif;
+}
+
+.butt-head {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 30px;
+  color: rgb(188 188 188);
+}
+
+.butt-blue {
+  padding: 10px;
+  color: white;
+  background-color: rgb(40 69 100);
+  border-radius: 3.5px;
+}
+
+section.row {
+  background-image: url("images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  margin-top: 3.5rem;
+  margin-bottom: 4.5rem;
+  margin-left: 380px;
+  justify-content: center;
+}
+
+.col-half {
+  font-family: "Tiempos Headline", sans-serif;
+  font-weight: 300;
+  color: white;
+  padding-top: 25px;
+  padding-left: 75px;
+  max-width: 50%;
+  font-size: x-large;
+}
+
+section.row > div.button {
+  padding-left: 75px;
+  padding-bottom: 75px;
+  padding-top: 20px;
+}
+
+div.button > button {
+  font-size: large;
+  border: none;
+  padding: 15px 50px;
+}
+
+.col-half > h1 {
+  font-size: 3rem;
+  max-width: 90%;
+}
+
+.col-half > p {
+  font-family: avenir, sans-serif;
+  max-width: 85%;
+  line-height: 2.3rem;
+  font-size: 1.2rem;
+}
+
+div.row {
+  padding-top: 3rem;
+  background-color: rgb(250 250 250);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+  font-family: avenir, sans-serif;
+  color: rgb(110 110 110);
+  font-size: x-large;
+  margin-bottom: 5rem;
+}
+
+.top {
+  color: rgb(110 110 110);
+  margin-bottom: 3.5rem;
+}
+
+.top > h1 {
+  font-family: "Tiempos Headline", sans-serif;
+}
+
+.top > p {
+  font-family: avenir, sans-serif;
+}
+
+.learn {
+  display: flex;
+  justify-content: center;
+  gap: 45rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  font-size: larger;
+}
+
+.col {
+  color: rgb(110 110 110);
+}
+
+div.learn > button {
+  padding: 15px 50px;
+  font-size: x-large;
+  border-radius: 5px;
+}
+
+.canvas {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  background-color: rgb(82 83 81);
+  display: flex;
+  justify-content: center;
+  gap: 35rem;
+  color: white;
+  font-family: avenir, sans-serif;
+  font-size: x-large;
+}
+
+.col-one-third {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.5rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.col-two-thirds {
+  display: flex;
+  justify-content: space-around;
+  gap: 10rem;
+}
+
+.bottom-row {
+  padding: 2rem 0;
+  padding-left: 25rem;
+}
+
+div.bottom-row > button {
+  font-size: x-large;
+  color: rgb(110 110 110);
+}
