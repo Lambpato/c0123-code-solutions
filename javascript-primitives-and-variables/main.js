@@ -1,13 +1,8 @@
-var fullName;
-var isCool;
-var totalPets;
-var unknown;
+var fullName = 'Lamberto Martinez';
+var isCool = false;
+var totalPets = 0;
+var unknown = null;
 var never;
-
-fullName = 'Lamberto Martinez';
-isCool = false;
-totalPets = 0;
-unknown = null;
 
 console.log('value of fullName:', fullName);
 console.log('value of isCool:', isCool);
