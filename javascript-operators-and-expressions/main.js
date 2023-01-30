@@ -5,9 +5,9 @@ var area = width * height;
 console.log('value of area:', area);
 console.log('typeof area:', typeof area);
 
-var bill = 29400;
-var payment = 1073;
-var change = bill - payment;
+var bill = 1073;
+var payment = 29400;
+var change = payment - bill;
 
 console.log('value of change:', change);
 console.log('typeof change:', typeof change);
@@ -39,7 +39,7 @@ var isSparta = headCount === 300;
 console.log('value of isSparta:', isSparta);
 console.log('type of isSparta:', isSparta);
 
-var motto = fullName + ' is the GOAT';
+var motto = fullName += ' is the GOAT';
 
 console.log('value of motto:', motto);
 console.log('typeof motto:', typeof motto);
