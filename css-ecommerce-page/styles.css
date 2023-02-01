@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  max-width: 200px;
+}
+
+.col-fifth {
+  flex-basis: calc(100% / 5);
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.price {
+  color: darkred;
+}
+
+.item > span,
+.price > del {
+  color: lightgray;
+}
