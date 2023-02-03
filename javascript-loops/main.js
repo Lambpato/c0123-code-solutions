@@ -9,11 +9,11 @@
 
 function getNumbersToTen() {
   var numbers = [];
-  var currentNumber = 0;
+  var currentNumber = 1;
 
-  while (currentNumber < 10) {
-    currentNumber++;
+  while (currentNumber <= 10) {
     numbers.push(currentNumber);
+    currentNumber++;
   }
   return numbers;
 }
@@ -22,11 +22,11 @@ console.log('getNumbersToTen():', getNumbersToTen());
 
 function getEvenNumbersToTwenty() {
   var evenNumbers = [];
-  var currentNumber = 0;
+  var currentNumber = 2;
 
-  while (currentNumber < 20) {
-    currentNumber += 2;
+  while (currentNumber <= 20) {
     evenNumbers.push(currentNumber);
+    currentNumber += 2;
   }
   return evenNumbers;
 }
@@ -34,12 +34,12 @@ function getEvenNumbersToTwenty() {
 console.log('getEvenNumbersToTwenty():', getEvenNumbersToTwenty());
 
 function repeatWord(word, times) {
-  var repeated = [];
-  var count = 0;
+  var repeated = '';
+  var count = 1;
 
   while (count < times) {
-    count++;
     repeated += word;
+    count++;
   }
   return repeated;
 }
