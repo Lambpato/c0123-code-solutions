@@ -2,7 +2,7 @@
 
 function toObject(keyValuePair) {
   var obj = {};
-  keyValuePair.toString();
-  obj = keyValuePair;
-  return obj;
+  for (var i = 0; i < keyValuePair.length; i++) {
+    obj.push(keyValuePair[i]);
+  }
 }
