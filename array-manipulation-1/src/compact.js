@@ -4,10 +4,8 @@ function compact(array) {
   var unwanted = ['', null, false, -0, NaN, 0, undefined];
   var newArray = [];
   for (var i = 0; i < array.length; i++) {
-    for (var y = 0; y < unwanted.length; y++) {
-      if (array[i] !== unwanted[y]) {
-        newArray.push(array[i]);
-      }
+    if (!unwanted.includes(array[i])) {
+      newArray.push(array[i]);
     }
   }
   return newArray;
