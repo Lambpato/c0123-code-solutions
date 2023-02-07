@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-off {
+  background-color: rgb(17 17 17);
+}
+
+#circle {
+  transform: rotate(-45deg);
+  padding: 6rem;
+  border-radius: 6rem;
+  margin: 25rem;
+  border-color: transparent;
+}
+
+.bulb-off {
+  background-color: rgb(37 37 37);
+  box-shadow: 5px -8px 1px 8px rgb(12 12 12);
+}
+
+.container-on {
+  background-color: rgb(254 249 241);
+}
+
+.bulb-on {
+  background-color: rgb(249 234 132);
+  box-shadow: 0 4px 30px 30px rgb(254 245 217);
+  box-shadow: inset 0 0.1em 1em rgb(254 245 217);
+}
