@@ -1,11 +1,7 @@
 /* exported getFirstChar */
 
 function getFirstChar(string) {
-  for (var i = 0; i < string.length; i++) {
-    if (i === 0) {
-      return string[i];
-    }
-  }
+  return string[0];
 }
 
 // declare a function names getFirstClass with the parameter of string

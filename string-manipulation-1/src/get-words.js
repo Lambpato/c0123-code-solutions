@@ -1,8 +1,8 @@
 /* exported getWords */
 
 function getWords(string) {
-  return string.split(' ').filter(Element => Element);
+  return string.split(' ');
 }
 
-/* use split functon to split on the space then filter() the empty strings  out
+/* use split functon to split on the space
 */
