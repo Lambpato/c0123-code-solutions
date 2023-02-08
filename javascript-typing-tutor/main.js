@@ -1,14 +1,18 @@
-var $string = document.querySelector('.string').textContent;
-var $span = document.querySelector('span').textContent;
+var $span = document.querySelectorAll('span');
 var counter = 0;
 
 function tutor(e) {
-  if ($string[counter] === e.key) {
-    $span.className = 'letter-right';
+  if ($span[counter].textContent === e.key) {
+    $span[counter].className = 'letter-right';
     counter++;
+    if ($span[counter] === undefined) {
+      return;
+    }
+    $span[counter].className = 'default';
   } else {
-    $span.className = 'letter-wrong';
+    $span[counter].className = 'letter-wrong';
   }
+
 }
 
 document.addEventListener('keydown', tutor);
