@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5rem;
+}
+
+.default {
+  border-bottom: 0.5rem solid;
+}
+
+.letter-right {
+  color: rgb(25 205 27);
+}
+
+.letter-wrong {
+  color: rgb(248 6 5);
+  border-bottom: 0.5rem solid;
+}
+
+span {
+  white-space: pre;
+}
