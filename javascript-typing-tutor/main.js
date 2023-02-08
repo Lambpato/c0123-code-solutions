@@ -12,7 +12,6 @@ function tutor(e) {
   } else {
     $span[counter].className = 'letter-wrong';
   }
-
 }
 
 document.addEventListener('keydown', tutor);
