@@ -17,10 +17,10 @@ function tabiContainer(e) {
     var $dataView = e.target.getAttribute('data-view');
 
     for (var y = 0; y < $viewNodeList.length; y++) {
-      if ($viewNodeList[y].getAttribute('data-view') !== $dataView) {
-        $viewNodeList[y].className = 'hidden';
-      } else if ($viewNodeList[y].getAttribute('data-view') === $dataView) {
+      if ($viewNodeList[y].getAttribute('data-view') === $dataView) {
         $viewNodeList[y].className = 'view';
+      } else if ($viewNodeList[y].getAttribute('data-view') !== $dataView) {
+        $viewNodeList[y].className = 'view hidden';
       }
     }
   }
