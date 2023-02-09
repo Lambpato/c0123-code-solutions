@@ -1,5 +1,5 @@
 var $taskList = document.querySelector('.task-list');
-function test(e) {
+function domDelegation(e) {
   console.log('e.target:', e.target);
   console.log('e.target.tagName:', e.target.tagName);
   if (e.target && e.target.matches('button')) {
@@ -7,4 +7,4 @@ function test(e) {
     e.target.closest('.task-list-item').remove();
   }
 }
-$taskList.addEventListener('click', test);
+$taskList.addEventListener('click', domDelegation);
