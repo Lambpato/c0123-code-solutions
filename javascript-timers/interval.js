@@ -7,6 +7,7 @@ function countdown() {
     $numberCount--;
   } else {
     $countDown.textContent = '~Earth Beeeelooowww Us~';
+    clearInterval(countdown);
   }
 }
 
