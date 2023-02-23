@@ -16,7 +16,7 @@ function carousel() {
       $dots[i].className = 'fa-regular fa-circle';
     }
   }
-  if (currentIndex > 4) {
+  if (currentIndex > $dots.length - 1) {
     currentIndex = 0;
   }
   currentIndex++;
@@ -50,7 +50,7 @@ function right(e) {
       $dots[i].className = 'fa-regular fa-circle';
     }
   }
-  if (currentIndex > 4) {
+  if (currentIndex > $dots.length - 1) {
     currentIndex = 0;
   }
   currentIndex++;
