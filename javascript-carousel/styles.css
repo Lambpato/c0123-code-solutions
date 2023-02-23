@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 5rem;
+}
+
+.row-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-circle {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-chevron-left:hover,
+.fa-chevron-right:hover,
+.fa-circle {
+  cursor: pointer;
+}
