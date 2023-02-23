@@ -3,7 +3,7 @@ var $previous = document.querySelector('.fa-chevron-left');
 var $next = document.querySelector('.fa-chevron-right');
 var $images = document.querySelectorAll('[data-img-id]');
 var $dotcontainer = document.querySelector('.row-dots');
-var currentIndex = 2;
+var currentIndex = 1;
 
 function carousel() {
   for (var i = 0; i < $dots.length; i++) {
