@@ -3,74 +3,65 @@ var $previous = document.querySelector('.fa-chevron-left');
 var $next = document.querySelector('.fa-chevron-right');
 var $images = document.querySelectorAll('[data-img-id]');
 var $dotcontainer = document.querySelector('.row-dots');
-var currentIndex = 1;
+var currentIndex = 0;
 
 function carousel() {
-  for (var i = 0; i < $dots.length; i++) {
-    var $dotid = Number($dots[i].getAttribute('data-id'));
-    if (currentIndex === $dotid) {
-      $images[i].className = 'pokemon';
-      $dots[i].className = 'fa-solid fa-circle';
-    } else if (currentIndex !== $dotid) {
-      $images[i].className = 'pokemon hidden';
-      $dots[i].className = 'fa-regular fa-circle';
-    }
-  }
-  if (currentIndex > $dots.length - 1) {
+  $images[currentIndex].classList.add('hidden');
+  $dots[currentIndex].classList.replace('fa-solid', 'fa-regular');
+  if (currentIndex === $dots.length - 1) {
     currentIndex = 0;
+  } else {
+    currentIndex++;
   }
-  currentIndex++;
+  $images[currentIndex].classList.remove('hidden');
+  $dots[currentIndex].classList.replace('fa-regular', 'fa-solid');
 }
-setInterval(carousel, 3000);
+var intervalId = setInterval(carousel, 3000);
 
 function cricles(e) {
   if (e.target && e.target.matches('i')) {
+    clearInterval(intervalId);
     e.target.closest('.fa-circle');
     e.target.closest('.fa-circle').className = 'fa-solid fa-circle ';
+    currentIndex = Number(e.target.closest('.fa-circle').getAttribute('data-id'));
     for (var i = 0; i < $dots.length; i++) {
-      if (Number(e.target.closest('.fa-circle').getAttribute('data-id')) === Number($images[i].getAttribute('data-img-id'))) {
-        $images[i].className = 'pokemon';
+      if (currentIndex === i) {
+        $images[currentIndex].classList.remove('hidden');
+        $dots[currentIndex].classList.replace('fa-regular', 'fa-solid');
       } else {
-        $images[i].className = 'pokemon hidden';
-        $dots[i].className = 'fa-regular fa-circle';
+        $images[i].classList.add('hidden');
+        $dots[i].classList.replace('fa-solid', 'fa-regular');
       }
     }
-
+    intervalId = setInterval(carousel, 3000);
   }
 }
-
 function right(e) {
-  for (var i = 0; i < $dots.length; i++) {
-    var $dotid = Number($dots[i].getAttribute('data-id'));
-    if (currentIndex === $dotid) {
-      $images[i].className = 'pokemon';
-      $dots[i].className = 'fa-solid fa-circle';
-    } else if (currentIndex !== $dotid) {
-      $images[i].className = 'pokemon hidden';
-      $dots[i].className = 'fa-regular fa-circle';
-    }
-  }
-  if (currentIndex > $dots.length - 1) {
+  clearInterval(intervalId);
+  $images[currentIndex].classList.add('hidden');
+  $dots[currentIndex].classList.replace('fa-solid', 'fa-regular');
+  if (currentIndex === $dots.length - 1) {
     currentIndex = 0;
+  } else {
+    currentIndex++;
   }
-  currentIndex++;
+  $images[currentIndex].classList.remove('hidden');
+  $dots[currentIndex].classList.replace('fa-regular', 'fa-solid');
+  intervalId = setInterval(carousel, 3000);
 }
 
 function left(e) {
-  for (var i = 0; i < $dots.length; i++) {
-    var $dotid = Number($dots[i].getAttribute('data-id'));
-    if (currentIndex === $dotid) {
-      $images[i].className = 'pokemon';
-      $dots[i].className = 'fa-solid fa-circle';
-    } else if (currentIndex !== $dotid) {
-      $images[i].className = 'pokemon hidden';
-      $dots[i].className = 'fa-regular fa-circle';
-    }
+  clearInterval(intervalId);
+  $images[currentIndex].classList.add('hidden');
+  $dots[currentIndex].classList.replace('fa-solid', 'fa-regular');
+  if (currentIndex === 0) {
+    currentIndex = 4;
+  } else {
+    currentIndex--;
   }
-  if (currentIndex < 2) {
-    currentIndex = 6;
-  }
-  currentIndex--;
+  $images[currentIndex].classList.remove('hidden');
+  $dots[currentIndex].classList.replace('fa-regular', 'fa-solid');
+  intervalId = setInterval(carousel, 3000);
 }
 
 $dotcontainer.addEventListener('click', cricles);
