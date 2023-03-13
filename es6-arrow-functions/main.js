@@ -23,17 +23,14 @@ const jokester = {
     $phrase.className = 'fade-in text-center mb-3 col-12';
     return $phrase;
   },
-  appendJokePhrase: $phrase => {
-    $jokeContainer.append($phrase);
-  }
+  appendJokePhrase: $phrase => $jokeContainer.append($phrase)
+
 };
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
   laugh: function () {
-    setTimeout(() => {
-      $flashImage.setAttribute('src', this.laughingUrl);
-    }, 3000);
+    setTimeout(() => $flashImage.setAttribute('src', this.laughingUrl), 3000);
   }
 };
 
