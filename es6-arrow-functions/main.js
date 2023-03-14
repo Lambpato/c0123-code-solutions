@@ -23,7 +23,9 @@ const jokester = {
     $phrase.className = 'fade-in text-center mb-3 col-12';
     return $phrase;
   },
-  appendJokePhrase: $phrase => $jokeContainer.append($phrase)
+  appendJokePhrase: function ($phrase) {
+    $jokeContainer.append($phrase);
+  }
 };
 
 const flash = {
@@ -33,10 +35,10 @@ const flash = {
   }
 };
 
-const handleJokeSubmission = event => {
+function handleJokeSubmission(event) {
   event.preventDefault();
   const { setup, punchline } = event.target.elements;
   jokester.tellJoke(setup.value, punchline.value);
-};
+}
 
 $jokeForm.addEventListener('submit', handleJokeSubmission);
