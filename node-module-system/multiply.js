@@ -1,3 +1,3 @@
-const multiply = (a, b) => `result: ${Number(a) * Number(b)}`;
+const multiply = (a, b) => a * b;
 
 export default multiply;

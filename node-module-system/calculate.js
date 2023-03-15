@@ -3,15 +3,18 @@ import subtract from './subtract.js';
 import multiply from './multiply.js';
 import divide from './divide.js';
 
-const param1 = process.argv[2];
-const param2 = process.argv[4];
+const param1 = Number(process.argv[2]);
+const param2 = Number(process.argv[4]);
+const math = process.argv[3];
 
-if (process.argv[3] === 'plus') {
-  console.log(add(param1, param2));
-} else if (process.argv[3] === 'minus') {
-  console.log(subtract(param1, param2));
-} else if (process.argv[3] === 'over') {
-  console.log(divide(param1, param2));
-} else if (process.argv[3] === 'times') {
-  console.log(multiply(param1, param2));
+if (math === 'plus') {
+  console.log('Result:', add(param1, param2));
+} else if (math === 'minus') {
+  console.log('Result:', subtract(param1, param2));
+} else if (math === 'over') {
+  console.log('Result:', divide(param1, param2));
+} else if (math === 'times') {
+  console.log('Result:', multiply(param1, param2));
+} else {
+  console.log('Error');
 }

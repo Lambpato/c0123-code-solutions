@@ -1,2 +1,3 @@
-const add = (a, b) => `result: ${Number(a) + Number(b)}`;
+const add = (a, b) => a + b;
+
 export default add;

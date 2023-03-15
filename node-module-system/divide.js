@@ -1,2 +1,3 @@
-const divide = (a, b) => `result: ${Number(a) / Number(b)}`;
+const divide = (a, b) => a / b;
+
 export default divide;

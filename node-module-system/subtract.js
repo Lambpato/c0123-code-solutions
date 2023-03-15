@@ -1,3 +1,3 @@
-const subtract = (a, b) => `result: ${Number(a) - Number(b)}`;
+const subtract = (a, b) => a - b;
 
 export default subtract;
