@@ -1,11 +1,7 @@
 import takeAChance from './take-a-chance.js';
 
-const promi = takeAChance('Lamberto');
-
-promi.then(resolve => {
+const promi = takeAChance('Lamberto').then(resolve => {
   console.log(resolve);
-});
-
-promi.catch(reject => {
+}).catch(reject => {
   console.log(reject.message);
 });
