@@ -1,4 +1,2 @@
-const thanks = () => console.log('Thanks for waiting!');
-
 console.log('Hello, just a moment...');
-setTimeout(thanks, 2000);
+setTimeout(() => console.log('Thanks for waiting!'), 2000);
