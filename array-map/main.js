@@ -1,5 +1,9 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+const doubles = numbers.map(x => x * 2);
+
+const prices = numbers.map(x => `$${x.toFixed(2)}`);
+
 const languages = [
   'Hypertext Markup Language',
   'Cascading Style Sheets',
@@ -7,10 +11,6 @@ const languages = [
   'PHP Hypertext Preprocessor',
   'Structured Query Language'
 ];
-
-const doubles = numbers.map(x => x * 2);
-
-const prices = numbers.map(x => `$${x.toFixed(2)}`);
 
 const upperCase = languages.map(lang => lang.toUpperCase());
 
