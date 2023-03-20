@@ -25,7 +25,6 @@ const grades = {
 
 app.get('/api/grades', (req, res) => {
   res.json(Object.values(grades));
-
 });
 
 app.listen(8080, () => {
