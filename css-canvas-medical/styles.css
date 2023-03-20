@@ -48,6 +48,7 @@ section.row {
   margin-bottom: 4.5rem;
   margin-left: 380px;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .col-half {
@@ -169,4 +170,8 @@ div.learn > button {
 div.bottom-row > button {
   font-size: x-large;
   color: rgb(110 110 110);
+}
+
+.about-us-head {
+  flex-wrap: nowrap;
 }
