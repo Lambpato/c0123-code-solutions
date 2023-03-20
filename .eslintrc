@@ -27,15 +27,6 @@
       "error",
       "multi-line"
     ],
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "warn",
-          "error"
-        ]
-      }
-    ],
     "no-restricted-globals": [
       "error",
       {
