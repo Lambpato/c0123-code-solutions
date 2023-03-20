@@ -8,9 +8,7 @@ const create = async () => {
     console.error('Note is empty, please update with a valid note');
     process.exit(1);
   }
-  await writeFile('data.json', JSON.stringify(json, null, 2), err => {
-    if (err) throw err;
-  });
+  await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
 };
 
 export default create;
