@@ -38,14 +38,14 @@ app.get('/api/notes/:id', (req, res) => {
   }
 });
 
-app.post('/api/notes', (req, res) => {
+app.post('/api/notes', async (req, res) => {
   try {
     if (Object.keys(req.body).includes('content')) {
       json.notes[json.nextId] = req.body;
       json.notes[json.nextId].id = json.nextId;
       json.nextId++;
       res.status(201).send(req.body);
-      writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
+      await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
     } else {
       message = { error: 'content is a required field' };
       res.status(400).send(message);
@@ -56,11 +56,11 @@ app.post('/api/notes', (req, res) => {
   }
 });
 
-app.delete('/api/notes/:id', (req, res) => {
+app.delete('/api/notes/:id', async (req, res) => {
   try {
     if (json.notes[req.params.id]) {
       delete json.notes[req.params.id];
-      writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
+      await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
       res.sendStatus(204);
     } else if (req.params.id < 0) {
       message = { error: 'id must be a positive integer' };
@@ -78,13 +78,13 @@ app.delete('/api/notes/:id', (req, res) => {
   }
 });
 
-app.put('/api/notes/:id', (req, res) => {
+app.put('/api/notes/:id', async (req, res) => {
   try {
     if (json.notes[req.params.id] && Object.keys(req.body).includes('content')) {
       json.notes[req.params.id] = req.body;
       json.notes[req.params.id].id = req.params.id;
       res.status(201).send(req.body);
-      writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
+      await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
     } else if (req.params.id < 0) {
       message = { error: 'id must be a positive integer' };
       res.status(400).send(message);
