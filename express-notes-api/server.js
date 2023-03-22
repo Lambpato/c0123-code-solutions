@@ -3,12 +3,10 @@ import express from 'express';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const app = express();
-
 const json = JSON.parse(await readFile('data.json'));
+let message = {};
 
 app.use(express.json());
-
-let message = {};
 
 app.get('/api/notes', (req, res) => {
   try {
