@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.get('/api/notes', (req, res) => {
   try {
-    res.json(Object.values(json));
+    res.json(Object.values(json.notes));
     res.status(200);
   } catch (err) {
     console.error(err.message);
@@ -42,7 +42,7 @@ app.post('/api/notes', async (req, res) => {
   try {
     if (Object.keys(req.body).includes('content')) {
       json.notes[json.nextId] = req.body;
-      json.notes[json.nextId].id = json.nextId;
+      json.notes[json.nextId].id = Number(json.nextId);
       json.nextId++;
       res.status(201).send(req.body);
       await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
@@ -82,7 +82,7 @@ app.put('/api/notes/:id', async (req, res) => {
   try {
     if (json.notes[req.params.id] && Object.keys(req.body).includes('content')) {
       json.notes[req.params.id] = req.body;
-      json.notes[req.params.id].id = req.params.id;
+      json.notes[req.params.id].id = Number(req.params.id);
       res.status(201).send(req.body);
       await writeFile('data.json', JSON.stringify(json, null, 2), 'utf8');
     } else if (req.params.id < 0) {
