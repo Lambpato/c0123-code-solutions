@@ -1,3 +1,3 @@
 select "email"
   from "customers"
- where "storeId" = '2'
+ where "storeId" = 2

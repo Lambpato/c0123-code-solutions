@@ -1,3 +1,3 @@
 select *
   from "customers"
- where "isActive" = 'false';
+ where "isActive" = false;
