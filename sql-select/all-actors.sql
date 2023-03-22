@@ -1,0 +1,2 @@
+select "actors"
+  from "actors"
