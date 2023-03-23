@@ -3,22 +3,22 @@ import express from 'express';
 import { readFile, writeFile } from 'node:fs/promises';
 
 const app = express();
-const json = JSON.parse(await readFile('data.json'));
-let message = {};
 
 app.use(express.json());
 
-app.get('/api/notes', (req, res) => {
+app.get('/api/notes', async (req, res) => {
+  const json = JSON.parse(await readFile('data.json'));
   try {
-    res.json(Object.values(json.notes));
-    res.status(200);
+    res.status(200).json(Object.values(json.notes));
   } catch (err) {
     console.error(err.message);
     res.status(500).send(err.message);
   }
 });
 
-app.get('/api/notes/:id', (req, res) => {
+app.get('/api/notes/:id', async (req, res) => {
+  const json = JSON.parse(await readFile('data.json'));
+  let message = {};
   try {
     if (json.notes[req.params.id]) {
       res.json(json.notes[req.params.id]);
@@ -39,8 +39,10 @@ app.get('/api/notes/:id', (req, res) => {
 });
 
 app.post('/api/notes', async (req, res) => {
+  const json = JSON.parse(await readFile('data.json'));
+  let message = {};
   try {
-    if (Object.keys(req.body).includes('content')) {
+    if ('content' in req.body) {
       json.notes[json.nextId] = req.body;
       json.notes[json.nextId].id = Number(json.nextId);
       json.nextId++;
@@ -57,6 +59,8 @@ app.post('/api/notes', async (req, res) => {
 });
 
 app.delete('/api/notes/:id', async (req, res) => {
+  const json = JSON.parse(await readFile('data.json'));
+  let message = {};
   try {
     if (json.notes[req.params.id]) {
       delete json.notes[req.params.id];
@@ -79,6 +83,8 @@ app.delete('/api/notes/:id', async (req, res) => {
 });
 
 app.put('/api/notes/:id', async (req, res) => {
+  const json = JSON.parse(await readFile('data.json'));
+  let message = {};
   try {
     if (json.notes[req.params.id] && Object.keys(req.body).includes('content')) {
       json.notes[req.params.id] = req.body;
