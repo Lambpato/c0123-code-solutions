@@ -19,7 +19,8 @@ app.get('/api/grades', async (req, res) => {
         from "grades"
     `;
     const result = await db.query(sql);
-    res.status(200).json(result);
+    const grade = result.rows[0];
+    res.status(200).json(grade);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'An unexpected error occurred.' });
@@ -29,7 +30,6 @@ app.get('/api/grades', async (req, res) => {
 app.post('/api/grades', async (req, res) => {
   try {
 
-    let error = {};
     const keyWords = ['name', 'course', 'score'];
     const input = req.body;
     const name = req.body.name;
@@ -38,24 +38,26 @@ app.post('/api/grades', async (req, res) => {
 
     for (const keys of keyWords) {
       if (!input[keys]) {
-        error = { error: `please include key word ${keys}` };
+        const error = { error: `please include key word ${keys}` };
         res.status(400).send(error);
         return;
       } else if (score < 0) {
-        error = { error: 'please ensure score is a positive number' };
+        const error = { error: 'please ensure score is a positive number' };
         res.status(400).send(error);
         return;
       } else if (score > 100) {
-        error = { error: 'please ensure score is not over 100' };
+        const error = { error: 'please ensure score is not over 100' };
         res.status(400).send(error);
         return;
       }
     }
+
     if (isNaN(score)) {
-      error = { error: 'please insert a numeric value for score' };
+      const error = { error: 'please insert a numeric value for score' };
       res.status(400).send(error);
       return;
     }
+
     const newGrades = await db.query(
           `insert into grades (name, course, score)
           values ($1, $2, $3)
@@ -74,7 +76,6 @@ app.post('/api/grades', async (req, res) => {
 app.put('/api/grades/:gradeId', async (req, res) => {
   try {
 
-    let error = {};
     const keyWords = ['name', 'course', 'score'];
     const input = req.body;
     const name = req.body.name;
@@ -84,26 +85,26 @@ app.put('/api/grades/:gradeId', async (req, res) => {
 
     for (const keys of keyWords) {
       if (!input[keys]) {
-        error = { error: `please include key word ${keys}}` };
-        res.status(400).send(error);
-        return;
-      } else if (score < 0) {
-        error = { error: 'please ensure score is a positive number' };
-        res.status(400).send(error);
-        return;
-      } else if (score > 100) {
-        error = { error: 'please ensure score is not over 100' };
+        const error = { error: `please include key word ${keys}}` };
         res.status(400).send(error);
         return;
       } else if (isNaN(score)) {
-        error = { error: 'please insert a numeric value for score' };
+        const error = { error: 'please insert a numeric value for score' };
+        res.status(400).send(error);
+        return;
+      } else if (score < 0) {
+        const error = { error: 'please ensure score is a positive number' };
+        res.status(400).send(error);
+        return;
+      } else if (score > 100) {
+        const error = { error: 'please ensure score is not over 100' };
         res.status(400).send(error);
         return;
       }
     }
 
     if (isNaN(gradeId)) {
-      error = { error: 'gradeId must be a numeric value' };
+      const error = { error: 'gradeId must be a numeric value' };
       res.status(400).send(error);
       return;
     }
@@ -123,7 +124,7 @@ app.put('/api/grades/:gradeId', async (req, res) => {
     if (grade) {
       res.status(200).json(grade);
     } else {
-      error = { error: `Cannot find grade with gradeId ${gradeId}` };
+      const error = { error: `Cannot find grade with gradeId ${gradeId}` };
       res.status(404).json(error);
     }
   } catch (err) {
@@ -134,11 +135,10 @@ app.put('/api/grades/:gradeId', async (req, res) => {
 
 app.delete('/api/grades/:gradeId', async (req, res) => {
   try {
-    let error = {};
     const gradeId = Number(req.params.gradeId);
 
     if (isNaN(gradeId)) {
-      error = { error: 'gradeId must be a numeric value' };
+      const error = { error: 'gradeId must be a numeric value' };
       res.status(400).send(error);
       return;
     }
@@ -156,7 +156,7 @@ app.delete('/api/grades/:gradeId', async (req, res) => {
     if (grade) {
       res.status(204).json(grade);
     } else {
-      error = { error: `Cannot find grade with gradeId ${gradeId}` };
+      const error = { error: `Cannot find grade with gradeId ${gradeId}` };
       res.status(404).json(error);
     }
 
