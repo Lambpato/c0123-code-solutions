@@ -83,6 +83,12 @@ app.put('/api/grades/:gradeId', async (req, res) => {
     const score = Number(req.body.score);
     const gradeId = Number(req.params.gradeId);
 
+    if (isNaN(gradeId)) {
+      const error = { error: 'gradeId must be a numeric value' };
+      res.status(400).send(error);
+      return;
+    }
+
     for (const keys of keyWords) {
       if (!input[keys]) {
         const error = { error: `please include key word ${keys}}` };
@@ -101,12 +107,6 @@ app.put('/api/grades/:gradeId', async (req, res) => {
         res.status(400).send(error);
         return;
       }
-    }
-
-    if (isNaN(gradeId)) {
-      const error = { error: 'gradeId must be a numeric value' };
-      res.status(400).send(error);
-      return;
     }
 
     const updatedRow = `
