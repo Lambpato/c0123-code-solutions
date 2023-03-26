@@ -7,11 +7,10 @@ class Shape {
   }
 
   print() {
-    console.log('area:', this.area);
-    console.log('circumference:', this.circumference);
+    return `area: ${this.area} circumference: ${this.circumference}`;
   }
 }
 
-const figura = new Shape(69, 420);
+const figura = new Shape(Shape, this.circumference);
 
-figura.print();
+console.log(figura.print());

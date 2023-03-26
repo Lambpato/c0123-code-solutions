@@ -1,16 +1,17 @@
 /* eslint-disable no-undef -- Shape is imported by .html */
 /* exported Circle */
 
-class Circle {
+class Circle extends Shape {
   constructor(radius) {
+    super(Math.PI * Math.pow(radius, 2), 2 * Math.PI * radius);
     this.radius = radius;
   }
 
   print() {
-    console.log('radius', this.radius);
+    return `${super.print()} radius ${this.radius}`;
   }
 }
 
-const circulo = new Circle(419);
+const circulo = new Circle(4.7);
 
-circulo.print();
+console.log(circulo.print());
