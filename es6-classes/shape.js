@@ -11,6 +11,6 @@ class Shape {
   }
 }
 
-const figura = new Shape(Shape, this.circumference);
+const figura = new Shape(1, 1);
 
 console.log(figura.print());
