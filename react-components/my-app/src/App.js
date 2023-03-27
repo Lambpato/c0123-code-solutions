@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import CustomButton from './CustomButton';
 
 function App() {
   return (
@@ -9,19 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <form
-         action="https://www.youtube.com/embed/BBJa32lCaaY"
-         method="get"
-         target="_blank">
-          <button
-          className="App-link"
-          type="submit"
-          rel="noopener noreferrer"
-          >
-            CLICK ME OR ELSE
-            </button>
-        </form>
-
+        <CustomButton />
       </header>
     </div>
   );
