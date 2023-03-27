@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn to Code
+          Learn to Code with LearningFuze
         </a>
       </header>
     </div>
