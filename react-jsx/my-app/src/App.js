@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <button>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+        </button>
         <button
           className="App-link"
           href="https://www.youtube.com/watch?v=oHg5SJYRHA0"
