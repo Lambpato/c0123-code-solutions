@@ -16,7 +16,7 @@ import f4 from './baz';
 
 // import from a file named `index.js` located in a directory named `baz` that
 // is in the parent directory:
-import f5 from './baz/index.js';
+import f5 from '../baz';
 
 // import from an `npm` module named `react`:
 import f6 from 'react';
