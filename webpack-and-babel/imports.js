@@ -8,15 +8,15 @@ import f1 from '/foo/bar/baz/qux.js';
 import f2 from 'foo.json';
 
 // import from a file named `bar.js` located in the parent directory:
-import f3 from '../bar.js';
+import f3 from '../bar';
 
 // import from a file named `index.js` located in a directory named `baz` that
 // is in the current directory:
-import f4 from 'baz/index.js';
+import f4 from './baz';
 
 // import from a file named `index.js` located in a directory named `baz` that
 // is in the parent directory:
-import f5 from '../baz/index.js';
+import f5 from './baz/index.js';
 
 // import from an `npm` module named `react`:
 import f6 from 'react';
