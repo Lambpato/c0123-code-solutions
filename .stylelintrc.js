@@ -5,6 +5,7 @@ module.exports = {
   ],
   "rules": {
     "no-empty-source": null,
+    react-jsx
     // Modify name pattern rules to accommodate Create React App conventions
     "selector-class-pattern": [
       "^([A-Za-z][a-z0-9]*)(-[a-z0-9]+)*$",
@@ -17,6 +18,6 @@ module.exports = {
       {
         message: (name) => `Expected keyframe name "${name}" to be kebab-case`,
       },
-    ]
+      ]
   }
 }
