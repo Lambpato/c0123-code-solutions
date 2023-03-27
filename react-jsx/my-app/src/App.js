@@ -9,14 +9,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
+        <button
           className="App-link"
           href="https://www.youtube.com/watch?v=oHg5SJYRHA0"
           target="_blank"
           rel="noopener noreferrer"
         >
           CLICK ME! NOW!
-        </a>
+        </button>
       </header>
     </div>
   );
