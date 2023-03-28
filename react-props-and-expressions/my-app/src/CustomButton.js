@@ -9,7 +9,6 @@ export default function CustomButton({ text, color }) {
         <button
           className="App-link"
           type="submit"
-          rel="noopener noreferrer"
           style={{backgroundColor: color}}
         >
           { text }
