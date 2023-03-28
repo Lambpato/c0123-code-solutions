@@ -4,8 +4,8 @@ export default function CustomButton ({text, color, onCustomClick}) {
   <button
     onClick={(e) => {
       e.preventDefault();
-      alert(onCustomClick)
-      window.location.href = "https://www.youtube.com/embed/BBJa32lCaaY";
+      onCustomClick(text)
+          window.open("https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1", "_blank");
     }}
     className="App-link"
     type="button"
