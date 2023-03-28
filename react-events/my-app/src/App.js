@@ -13,9 +13,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-      <CustomButton color='red' text='Pretty Cool Red' onCustomClick={handleCustomClick} />
-      <CustomButton color='green' text='Less Cool Green' onCustomClick={handleCustomClick} />
-      <CustomButton color='lightblue' text='WOAH SWAG BLUE' onCustomClick={handleCustomClick} />
+      <CustomButton color="red" text="Pretty Cool Red" onCustomClick={handleCustomClick} />
+      <CustomButton color="green" text="Less Cool Green" onCustomClick={handleCustomClick} />
+      <CustomButton color="lightblue" text="WOAH SWAG BLUE" onCustomClick={handleCustomClick} />
       </header>
     </div>
   );
