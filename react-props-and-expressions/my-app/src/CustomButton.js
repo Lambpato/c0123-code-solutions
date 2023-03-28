@@ -4,7 +4,8 @@ export default function CustomButton({ text, color }) {
       <form
         action="https://www.youtube.com/embed/BBJa32lCaaY"
         method="get"
-        target="_blank">
+        target="_blank"
+        >
         <button
           className="App-link"
           type="submit"
