@@ -4,7 +4,6 @@ export default function HotButton ({text}) {
   const [clickCount, setClicked] = useState(0);
   const handleClick = () => {
     setClicked(clickCount + 1)
-    console.log(clickCount)
 }
 
   const style =
