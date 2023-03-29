@@ -1,29 +1,20 @@
 import { useState } from "react"
 export default function ToggleButton ({text, color}) {
   const [isClicked, setisClicked] = useState(false)
-  const handleClick = () => {
+    console.log(`useState ${isClicked}`)
+    const handleClick = () => {
+    console.log(`before settter ${isClicked}`);
     setisClicked(!isClicked);
-    console.log(isClicked);
+    console.log(`after setter ${isClicked}`);
   }
-  if (!isClicked) {
+
    return (<button
     onClick={handleClick}
     type="button"
-    style={{backgroundColor: "white"}}
+    style={!isClicked ? {backgroundColor: "white"} : {backgroundColor: color}}
     >
       {text}
       </button>
    )
-  } else {
-     return (
-  <button
-  onClick={handleClick}
-  type="button"
-  style={{backgroundColor: color}}
-  >
-    {text}
-  </button>
- )
-  }
 
 }
