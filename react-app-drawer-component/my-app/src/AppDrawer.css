@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu-icon {
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu-drawer {
+  top: 0;
+  z-index: 1;
+  width: 275px;
+  min-height: 100vh;
+  padding-top: 1rem;
+  background-color: rgb(255 255 255);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 45%);
+  transform: translateX(-283px);
+  transition: transform 0.25s ease-in-out;
+}
+
+.listnames {
+  text-align: center;
+}
+
+.menu-drawer.is-open {
+  transform: translateX(0);
+}
+
+.menu-shade {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.menu-shade.is-drawn {
+  opacity: 0.5;
+  pointer-events: all;
+}
+
+li {
+  list-style: none;
+  border-bottom: 1px black solid;
+}
+
+li:hover,
+.display:hover {
+  cursor: pointer;
+}
+
+.menu-drawer,
+.menu-shade {
+  position: absolute;
+}
