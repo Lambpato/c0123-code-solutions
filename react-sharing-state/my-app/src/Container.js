@@ -10,10 +10,10 @@ import React, { useState } from 'react';
 export default function Container({ items }) {
   const [current, setCurrent] = useState(0);
 
-  function toggleBackgroundPrev() {
+  function togglePrev() {
    setCurrent((current + 1) % items.length);
   }
-  function toggleBackgroundNext() {
+  function toggleNext() {
     setCurrent(((current - 1) + items.length) % items.length);
   }
   function toggleButton(i) {
@@ -23,9 +23,9 @@ export default function Container({ items }) {
     <div>
       <div>{items[current]}</div>
       <div>
-        <Button text="Prev" onClick={toggleBackgroundNext} backgroundColor={"white"} />
+        <Button text="Prev" onClick={toggleNext} backgroundColor={"white"} />
         <Buttons count={items.length} onClick={toggleButton} current={current} />
-        <Button text="Next" onClick={toggleBackgroundPrev} backgroundColor={"white"}/>
+        <Button text="Next" onClick={togglePrev} backgroundColor={"white"}/>
       </div>
     </div>
   );
