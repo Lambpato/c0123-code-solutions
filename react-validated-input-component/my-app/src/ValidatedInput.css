@@ -1,0 +1,11 @@
+.contrasena {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
