@@ -6,7 +6,7 @@ export default function ValidatedInput () {
   const numReg = /[0-9]+/;
   const upReg = /[A-Z]+/;
   const charReg = /[!@#$%^&*()]+/;
-  const passwordLength =
+  const passwordReq =
   (password.length === 0) ?
     "A password is required."
 : (password.length < 8) ?
@@ -21,7 +21,6 @@ export default function ValidatedInput () {
 "";
 
   return (
-    <>
     <div className="contrasena">
       <div>
         <label htmlFor="password">Password</label>
@@ -38,12 +37,10 @@ export default function ValidatedInput () {
             </input>
         </div>
 
-          <p style={{ color: passwordLength === '' ? "green" : "red" }}>{passwordLength === '' ? "(9`･ω･)9" : '( ‡▼益▼)'}</p>
+        <p style={{ color: passwordReq === '' ? "green" : "red" }}>{passwordReq  === '' ? "(9`･ω･)9" : '( ‡▼益▼)'}</p>
       </div>
 
-      <p>{passwordLength}</p>
+      {passwordReq !== '' ? <p>{passwordReq}</p> : undefined}
     </div>
-
-    </>
   )
 }
