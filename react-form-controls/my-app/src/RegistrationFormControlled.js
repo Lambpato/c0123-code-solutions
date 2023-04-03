@@ -13,12 +13,12 @@ export default function RegistrationFormControlled() {
     <form method="post" onSubmit={handleSubmit}>
 
       <label>
-        UserName: <input onChange={(e) => setUsername(e.target.value)} type="text"/>
+        UserName: <input onChange={(e) => setUsername(e.target.value)} type="text" value={username} />
       </label>
 
 
       <label>
-        Password: <input onChange={(e) => setPassword(e.target.value)} type="password"/>
+        Password: <input onChange={(e) => setPassword(e.target.value)} type="password" value={password} />
       </label>
 
       <label>
