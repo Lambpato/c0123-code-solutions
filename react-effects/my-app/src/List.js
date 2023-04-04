@@ -22,6 +22,7 @@ export default function List() {
         setIsLoading(false);
       })
       .catch((error) => {
+        setIsLoading(false);
         setError(error);
       });
   }}, [isLoading]);
