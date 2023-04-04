@@ -23,10 +23,11 @@ export default function Users() {
         } catch (err) {
           setError(err);
           console.error('Error:', err.message)
+        } finally {
+          setIsLoading(false);
         }
       }
-      logJsonData();
-      setIsLoading(false);
+       logJsonData();
     }
   }, [isLoading]);
 

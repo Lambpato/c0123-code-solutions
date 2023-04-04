@@ -15,11 +15,12 @@ export default function User({ userId, onCancel }) {
           const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
           if (!response.ok) throw new Error(`Error Code: ${response.status} Error Message: It Broken`);
           const dataJson = await response.json();
-          setIsLoading(false);
           setUser(dataJson);
         } catch (err) {
           setError(err);
           console.error('Error:', err.message)
+        } finally {
+          setIsLoading(false);
         }
       }
       logJsonData();
