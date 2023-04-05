@@ -37,6 +37,7 @@ export default function Todos() {
           },
           body: JSON.stringify(newTodo),
       });
+
        if (!response.ok) throw new Error(`Error Code: ${response.status} Error Message: It Broken`);
         const postJson = await response.json();
         const newTodoList = todos.concat(postJson);
