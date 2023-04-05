@@ -4,7 +4,7 @@ import { ClientError } from './client-error.js';
 
 export function authorizationMiddleware(req, res, next) {
   const auth = req.get('Authorization');
-  const token = auth.split('Bearer ')[1];
+  const token = auth?.split('Bearer ')[1];
   if (!token) {
     throw new ClientError(401, 'authentication required');
   }
