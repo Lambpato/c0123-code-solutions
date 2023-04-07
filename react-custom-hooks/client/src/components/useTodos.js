@@ -28,20 +28,14 @@ export function useTodos() {
   }
 
 
-      const toggleCompleted = async (todoId) => {
-    /* TODO: Find the Todo item being updated, toggle its completed prop, and call
-     * the API function that updates a Todo item.
-     * When the promise returned by that function resolves, update the `todos` state.
-     * When updating this state, use the updated `todo` returned from the API.
-     * Note that it is critical that you pass a _new_ array. Do not modify the `todos` array.
-     */
-      const oldTodo = todos.find((todo) => todo.todoId === todoId);
-      const actualizado = await updateTodo(oldTodo);
-      const allTodos = todos.map((original) =>
-      original.todoId === actualizado.todoId
-        ? actualizado
-        : original
-    );
+  const toggleCompleted = async (todoId) => {
+    const oldTodo = todos.find((todo) => todo.todoId === todoId);
+    const actualizado = await updateTodo(oldTodo);
+    const allTodos = todos.map((original) =>
+    original.todoId === actualizado.todoId
+      ? actualizado
+      : original
+  );
     setTodos(allTodos);
   }
 
