@@ -24,7 +24,7 @@ export function useTodos() {
 
   const addTodo = async (newTodo) => {
     const nuevo = await createTodo(newTodo);
-    setTodos((prev) => prev.concat(nuevo));
+    setTodos([...todos, nuevo]);
   }
 
 
