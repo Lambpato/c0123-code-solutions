@@ -49,35 +49,24 @@ export default function Todos() {
   };
 
   async function toggleCompleted(todoId) {
-   try {
-      let matchTodo = {};
-      const status = {};
-
-      for (let i = 0; i < todos.length; i++) {
-        if (todos[i].todoId === todoId) {
-          matchTodo = todos[i];
-          status.isCompleted = !matchTodo.isCompleted;
-        }
-      }
-
-      const response = await fetch(url(`/api/todos/${todoId}`), {
+    const oldTodo = todos.find((todo) => todo.todoId === todoId);
+    const response = await fetch(url(`/api/todos/${todoId}`), {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(status)
+        body: JSON.stringify({ isCompleted: !oldTodo.isCompleted }),
       });
-      if (!response.ok) {
-        throw new Error('Network response not OK', response.status);
-      }
-      const jsonData = await response.json();
-      const newTodos = todos.map(item => {
-        if (item.todoId === todoId) {
-          return jsonData;
-        }
-        return item;
-      });
-      setTodos(newTodos);
+
+      try {
+         if (!response.ok) { throw new Error(`fetch Error ${response.status}`)};
+          const jsonData = await response.json();
+          const newTodo = todos.map((original) =>
+          original.todoId === jsonData.todoId
+          ? jsonData
+          : original
+          );
+      setTodos(newTodo);
     } catch (error) {
       setError(error);
   }
