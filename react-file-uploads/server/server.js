@@ -35,6 +35,7 @@ app.post('/api/uploads', uploadsMiddleware.single('image'), async (req, res, nex
     const result = await db.query(sql, params);
     const image = result.rows[0];
     res.status(201).json(image);
+    next();
   } catch (err) {
     next(err);
   }
