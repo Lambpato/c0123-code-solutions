@@ -37,8 +37,8 @@ function uniqueQuadratic(words) {
       }
     }
     if (isUnique) {                 // 1 * n * n = O(n^2)
-      unique[unique.length] = word; // 3 * 1 = O(3)
+      unique[unique.length] = word; // 3 * n = O(3n)
     }
   }
   return unique;                    // 1 * 1 = O(1)
-} // Big O Notation for uniqueQuadratic: O(n)
+} // Big O Notation for uniqueQuadratic: O(n^2)
