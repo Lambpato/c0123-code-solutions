@@ -1,10 +1,9 @@
 /* exported omit */
 
 function omit(source, keys) {
-  let object = {};
-  object = source;
+  const object = {};
   for (const prop in source) {
-    if (keys.includes(prop) && source[prop] !== undefined) {
+    if (!keys.includes(prop)) {
       object[prop] = source[prop];
     }
   }
