@@ -1,11 +1,11 @@
 /* exported pick */
 
 function pick(source, keys) {
-  var newObject = {};
-  for (var prop in source) {
-    if (prop.includes(keys)) {
-      newObject.push(source.keys);
+  const object = {};
+  for (const prop in source) {
+    if (keys.includes(prop) && source[prop] !== undefined) {
+      object[prop] = source[prop];
     }
   }
-  return newObject;
+  return object;
 }
