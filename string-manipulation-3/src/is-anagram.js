@@ -1,12 +1,12 @@
 /* exported isAnagram */
 
 function isAnagram(firstString, secondString) {
-  const fString = firstString.split('').sort();
-  const sString = secondString.split('').sort();
-  console.log(fString);
-  console.log(sString);
-  for (let i = 0; i < fString.length; i++) {
-    if (fString[i] !== sString[i]) {
+  const arr1 = firstString.replaceAll(' ', '').split('').sort();
+  const arr2 = secondString.replaceAll(' ', '').split('').sort();
+  console.log(arr1);
+  console.log(arr2);
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
       return false;
     }
   }
